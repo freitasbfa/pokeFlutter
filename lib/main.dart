@@ -59,8 +59,48 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Container(
-              padding: const EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
-              child: Image.asset('imagens/home_image.png'),
+              padding: const EdgeInsetsDirectional.fromSTEB(0, 30, 0, 30),
+              child: Image.asset('imagens/image_home.png'),
+            ),
+            MaterialButton(onPressed: () {
+              setState(() {
+
+              });
+            },
+              minWidth: 450,
+              color: const Color(0XFFf2bc11),
+              child: const Text(
+                "Create Account",
+                style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20
+                ),
+              ),
+            ),
+            Container(
+              padding: const EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+              alignment: Alignment.center,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
+                  Text(
+                        "Already have an account?",
+                    style: TextStyle(
+                      color: Colors.white
+                    ),
+                    ),
+                   SizedBox(
+                     width: 5,
+                   ),
+                   Text(
+                        "Login",
+                      style: TextStyle(
+                        color: Color(0XFFf2bc11),
+                      ),
+                    ),
+                ],
+              ),
             )
           ],
         ),
