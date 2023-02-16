@@ -1,18 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:poke_flutter/arguments/FormData.dart';
+import 'package:poke_flutter/model/Character.dart';
 
-class CharactersDetailsPage extends StatefulWidget {
-
-  @override
-  State<StatefulWidget> createState() => _CharactersDetailsPage();
-
-}
-
-class _CharactersDetailsPage extends State<CharactersDetailsPage> {
-
+class CharactersDetailsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var formData = ModalRoute.of(context)!.settings.arguments as FormData;
+    var formData = ModalRoute
+        .of(context)!
+        .settings
+        .arguments as Character;
 
     return Scaffold(
       appBar: AppBar(
@@ -21,7 +16,7 @@ class _CharactersDetailsPage extends State<CharactersDetailsPage> {
       body: Center(
         child: Column(
           children: [
-            Text(formData.number.toString())
+            Text(formData.nome)
           ],
         ),
       ),
