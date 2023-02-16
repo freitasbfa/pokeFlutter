@@ -65,13 +65,22 @@ class _ListCharactersPage extends State<ListCharactersPage> {
             children: List.generate(characterList.length, (index) {
               return GestureDetector(
                   child: Card(
+                    margin: const EdgeInsets.all(10),
                     color: Color(characterList[index].color),
-                    child: Column(children: [
-                      Expanded(
-                          child: Image.network(characterList[index].image)),
-                      Container(margin: const EdgeInsets.all(10) ,
-                          child: Text(characterList[index].nome))
-                    ]),
+                    child: Container(
+                      padding: const EdgeInsets.all(20),
+                      child: Column(children: [
+                        Expanded(
+                            child: Image.network(characterList[index].image)),
+                        Container(margin: const EdgeInsets.all(12) ,
+                            child: Text(characterList[index].nome,
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold
+                            ),),
+                        )
+                      ]),
+                    ),
                   ),
                   onTap: () {
                     Navigator.pushNamed(context, "/charactersDetails",
