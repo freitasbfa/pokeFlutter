@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:poke_flutter/screen/list_characters.dart';
+import 'package:poke_flutter/widgets/ListCharactersPage.dart';
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({super.key, required this.title});
