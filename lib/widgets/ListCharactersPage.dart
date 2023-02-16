@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:poke_flutter/model/Character.dart';
 
 class ListCharactersPage extends StatefulWidget {
+  const ListCharactersPage({super.key});
+
   @override
   State<StatefulWidget> createState() => _ListCharactersPage();
 }
