@@ -21,7 +21,7 @@ class _WelcomePage extends State<WelcomePage> {
         child: Column(
           children: [
             Container(
-              padding: const EdgeInsetsDirectional.fromSTEB(20, 20, 0, 0),
+              padding: const EdgeInsetsDirectional.fromSTEB(20, 40, 0, 0),
               alignment: Alignment.topLeft,
               child: const Text(
                 "Welcome to",
@@ -39,16 +39,19 @@ class _WelcomePage extends State<WelcomePage> {
                     fontSize: 30),
               ),
             ),
-            Container(
-              padding: const EdgeInsetsDirectional.fromSTEB(0, 30, 0, 30),
-              child: Image.asset('imagens/image_home.png'),
+            Expanded(
+              child: Container(
+                padding: const EdgeInsetsDirectional.fromSTEB(0, 20, 0, 30),
+                child: Image.asset('assets/images/image_home.png'),
+              ),
             ),
             MaterialButton(
               onPressed: () {
                 setState(() {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => ListCharactersPage()),
+                    MaterialPageRoute(
+                        builder: (context) => ListCharactersPage()),
                   );
                 });
               },
@@ -65,23 +68,35 @@ class _WelcomePage extends State<WelcomePage> {
             Container(
               padding: const EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
               alignment: Alignment.center,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  Text(
-                    "Already have an account?",
-                    style: TextStyle(color: Colors.white),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => ListCharactersPage()),
+                  );
+                },
+                child: Container(
+                  padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 40),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [
+                      Text(
+                        "Already have an account?",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Text(
+                        "Login",
+                        style: TextStyle(
+                          color: Color(0XFFf2bc11),
+                        ),
+                      ),
+                    ],
                   ),
-                  SizedBox(
-                    width: 5,
-                  ),
-                  Text(
-                    "Login",
-                    style: TextStyle(
-                      color: Color(0XFFf2bc11),
-                    ),
-                  ),
-                ],
+                ),
               ),
             )
           ],
