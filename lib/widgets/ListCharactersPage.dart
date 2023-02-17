@@ -75,10 +75,10 @@ class _ListCharactersPage extends State<ListCharactersPage> {
                         Expanded(
                             child: Image.network(characterList[index].image)),
                         Container(margin: const EdgeInsets.all(12) ,
-                            child: Text(characterList[index].nome,
+                          child: Text(characterList[index].nome,
                             style: const TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold
                             ),),
                         )
                       ]),

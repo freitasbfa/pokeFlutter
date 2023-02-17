@@ -1,5 +1,4 @@
 class Character {
-
   String nome;
   String image;
   int color;
